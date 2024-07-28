@@ -21,7 +21,7 @@ setup:
 clean:
 	$(GOCLEAN)
 	rm -rf $(RELEASE_NAME) $(BUILDDIR)
-	rm -rf php-*
+	rm -rf .s2hWS
 
 format:
 	goimports -w -d $(GOFILES)
@@ -31,6 +31,6 @@ test:
 
 build-win: format clean setup
 	rsrc -manifest main.exe.manifest -ico assets/icon.ico -o rsrc.syso
-	GOOS=windows GOARCH=386 $(GOBUILD) -o $(APP_NAME).go -o $(RELEASEDIR)/$(RELEASE_NAME)$(BINARY_WIN)
+	GOOS=windows GOARCH=amd64 $(GOBUILD) -o $(APP_NAME).go -o $(RELEASEDIR)/$(RELEASE_NAME)$(BINARY_WIN)
 
 release: build-win

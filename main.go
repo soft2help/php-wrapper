@@ -38,8 +38,13 @@ func main() {
 
 	phpExe, err = php.FindPHPExec(installFolder)
 	if err != nil {
-		fmt.Printf("Unable to FIND WS: %v", err)
-		php.ExitEzPHP()
+
+		phpExe, err = php.FastInstall(downloadURL, installFolder)
+
+		if err != nil {
+			fmt.Printf("Unable to install PHP: %v", err)
+			php.ExitPHPWrapper()
+		}
 	}
 
 	phpExeAbs, _ = filepath.Abs(phpExe)

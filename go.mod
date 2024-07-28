@@ -1,4 +1,4 @@
-module github.com/marcomilon/ezphp
+module github.com/soft2help/php-wrapper
 
 go 1.14
 

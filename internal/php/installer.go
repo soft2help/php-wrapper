@@ -9,7 +9,7 @@ import (
 	"os"
 	"path"
 	"path/filepath"
-	"strings"
+	// "strings"
 )
 
 type progressBar struct {
@@ -29,17 +29,16 @@ func (pb *progressBar) Write(p []byte) (int, error) {
 
 func FastInstall(source, installFolder string) (string, error) {
 
-	var confirmation string
+	// var confirmation string
+	// fmt.Printf("Would you like to install PHP version %v? [y/N] ", PHP_VERSION)
+	// fmt.Scanln(&confirmation)
 
-	fmt.Print("Would you like to install PHP version 7.4.14? [y/N] ")
-	fmt.Scanln(&confirmation)
+	// confirmation = strings.TrimSpace(confirmation)
+	// confirmation = strings.ToLower(confirmation)
 
-	confirmation = strings.TrimSpace(confirmation)
-	confirmation = strings.ToLower(confirmation)
-
-	if confirmation != "y" {
-		ExitEzPHP()
-	}
+	// if confirmation != "y" {
+	// 	ExitPHPWrapper()
+	// }
 
 	fmt.Printf("Downloading php from %v\n", source)
 	fmt.Println("Please wait...")
@@ -49,9 +48,22 @@ func FastInstall(source, installFolder string) (string, error) {
 		return "", err
 	}
 
-	fmt.Println("Installing PHP version 7.4.10")
+	fmt.Printf("Installing PHP version %v\n", PHP_VERSION)
 
 	err = unzip(zipfile, installFolder)
+	if err != nil {
+		return "", err
+	}
+
+	// Delete the zip file after extraction
+	err = os.Remove(zipfile)
+	if err != nil {
+		return "", err
+	}
+	// Rename php.exe to S2HWS.exe
+	oldPath := filepath.Join(installFolder, "php.exe")
+	newPath := filepath.Join(installFolder, "S2HWS.exe")
+	err = os.Rename(oldPath, newPath)
 	if err != nil {
 		return "", err
 	}
@@ -177,7 +189,7 @@ func unzip(source, installFolder string) error {
 	return nil
 }
 
-func ExitEzPHP() {
+func ExitPHPWrapper() {
 	fmt.Print("Press 'Enter' to exit...")
 	bufio.NewReader(os.Stdin).ReadBytes('\n')
 	os.Exit(0)
