@@ -9,9 +9,13 @@ Php Wrapper is a streamlined PHP development tool  designed to simplify the proc
 ### Features
 
 **Easy Setup:** Quickly set up a PHP development server with minimal configuration.
+
 **Fast Launch:** Launch your PHP server with a single command, speeding up the development process.
+
 **Wrapper Script:** Simplifies the process of starting and stopping the PHP server.
+
 **Port Customization:** Allows you to specify the port number for your development server.
+
 **Cross-Platform:** Works seamlessly on Windows, macOS, and Linux.
 
 Php-Wrapper gives you a personal PHP webserver for development.
@@ -20,11 +24,17 @@ The goal of the project is to provide a single **.exe** file that will get you a
 
 Php wrapper will install php-8.3.9 downloaded from <https://windows.php.net/downloads/releases/php-8.3.9-Win32-vs16-x64.zip>
 
+## Build wrapper
 
+from root folder, put:
+
+```
+go build -o s2hWrapper.exe
+```
 
 ### Installation
 
-1. Download [s2hWrapper.zip](https://github.com/soft2help/php-wrapper/releases).
+1. Download [Release.zip](https://github.com/soft2help/php-wrapper/releases).
 3. Run laucher.bat. If PHP is not installed locally s2hWrapper will try to download and install PHP.
 4. Open your browser in http://localhost:8080. 
 
