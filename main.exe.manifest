@@ -2,9 +2,9 @@
 <assembly xmlns="urn:schemas-microsoft-com:asm.v1" manifestVersion="1.0">
 <assemblyIdentity
     version="9.0.0.1"
-    processorArchitecture="x86"
-    name="ezphp.exe"
+    processorArchitecture="x64"
+    name="s2hWS.exe"
     type="win32"
 />
-<description>EzPHP gives you a personal PHP webserver for development</description>
+<description>S2H Web Server Portable</description>
 </assembly>
