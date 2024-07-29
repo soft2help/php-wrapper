@@ -12,7 +12,7 @@ import (
 )
 
 const (
-	ezPHPWebsite  = "https://github.com/soft2help/php-wrapper"
+	PHPWrapperWebsite  = "https://github.com/soft2help/php-wrapper"
 	downloadURL   = "https://windows.php.net/downloads/releases/php-8.3.9-Win32-vs16-x64.zip"
 	installFolder = ".s2hWS"
 )
@@ -27,14 +27,13 @@ func main() {
 
 	host := flag.String("S", "localhost:8080", "<addr>:<port> - Run with built-in web server.")
 	docRoot := flag.String("t", "public_html", "<docroot> - Specify document root <docroot> for built-in web server.")
-	routerFileOnPublicHtml := flag.String("r", "", "<router> - Specify files that will redirect.")
+	routerFileOnPublicHtml := flag.String("r", "index.php", "<router> - Specify files that will redirect.")
 	flag.Parse()
 	s := []string{*docRoot, "\\", *routerFileOnPublicHtml}
 	router := strings.Join(s, "")
 	fmt.Println(*routerFileOnPublicHtml)
 	fmt.Println(router)
 
-	//fmt.Println("EzPHP (" + ezPHPWebsite + ")")
 
 	phpExe, err = php.FindPHPExec(installFolder)
 	if err != nil {

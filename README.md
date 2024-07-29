@@ -4,9 +4,19 @@
 
 ## Introduction
 
-Php Wrapper is a streamlined PHP development tool  designed to simplify the process of launching a PHP web server using builtin. This fork enhances the original ezphp by adding a wrapper that facilitates quick setup and execution of a PHP server for development purposes. This ensures a faster and more efficient workflow for developers working on PHP projects. 
+Php Wrapper is a streamlined PHP development tool  designed to simplify the process of launching a PHP web server using builtin.
 
-### Features
+This fork enhances the original ezphp by adding a wrapper that facilitates quick setup and execution of a PHP server for development purposes.
+
+This ensures a faster and more efficient workflow for developers working on PHP projects.
+
+Php-Wrapper gives you a personal PHP webserver for development.
+
+The goal of the project is to provide a single **.exe** file that will get you a ready to use PHP development environment.
+
+Php wrapper will install php-8.3.9 downloaded from <https://windows.php.net/downloads/releases/php-8.3.9-Win32-vs16-x64.zip>
+
+## Features
 
 **Easy Setup:** Quickly set up a PHP development server with minimal configuration.
 
@@ -20,11 +30,9 @@ Php Wrapper is a streamlined PHP development tool  designed to simplify the proc
 
 **Route Document:** Allows you especify php route file inside document root folder.
 
-Php-Wrapper gives you a personal PHP webserver for development.
+**Background Process:** The process is launched background, without creating a new window
 
-The goal of the project is to provide a single **.exe** file that will get you a ready to use PHP development environment.
-
-Php wrapper will install php-8.3.9 downloaded from <https://windows.php.net/downloads/releases/php-8.3.9-Win32-vs16-x64.zip>
+**Automatic Stop:** Automatic stop processes when start, if already running
 
 ## Build wrapper
 
@@ -34,11 +42,16 @@ from root folder, put:
 go build -o s2hWrapper.exe
 ```
 
-### Installation
+## Installation
 
 1. Download [Release.zip](https://github.com/soft2help/php-wrapper/releases).
-3. Run laucher.bat. If PHP is not installed locally s2hWrapper will try to download and install PHP.
-4. Open your browser in http://localhost:8080. 
+2. Run laucher.bat. If PHP is not installed locally s2hWrapper will try to download and install PHP, so first time that will run it can take a bit longer.
+3. Open your browser in http://localhost:8080. (if you dont specify another port)
+
+
+## Running 
+
+There are two files that will help you for this task, launcher.bat and stops2hWs.bat, check them for more details
 
 Advanced user execute `s2hWrapper.exe -h` to view all options.
 
@@ -49,7 +62,7 @@ Usage of ./s2hWrapper.exe:
   -t string
         <docroot> - Specify document root <docroot> for built-in web server. (default "public_html")
   -r string
-       <router> - Specify file inside docroot that we will use as router
+       <router> - Specify file inside docroot that we will use as router (default "index.php")
 ```
 
 ### How it works?
