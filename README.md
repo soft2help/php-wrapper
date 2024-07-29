@@ -14,9 +14,11 @@ Php Wrapper is a streamlined PHP development tool  designed to simplify the proc
 
 **Wrapper Script:** Simplifies the process of starting and stopping the PHP server.
 
-**Port Customization:** Allows you to specify the port number for your development server.
+**Port Customization:** Allows you to specify the port number for your development server. by default 8080.
 
-**Cross-Platform:** Works seamlessly on Windows, macOS, and Linux.
+**Document root folder:** Allows you to specify the a document root folder. by default: public_html.
+
+**Route Document:** Allows you especify php route file inside document root folder.
 
 Php-Wrapper gives you a personal PHP webserver for development.
 
