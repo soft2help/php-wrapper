@@ -73,7 +73,7 @@ To start working just copy your PHP files to the **Document root** folder and th
 
 The primary motivation behind creating s2hWrapper was to provide developers with a simplified and efficient way to develop and run PHP applications on their local machines. Traditional methods of setting up a development environment for PHP can be cumbersome, often requiring complex configurations and installations. s2hWrapper aims to streamline this process, making it easier for developers to focus on coding rather than configuration.
 
-**Note:** s2hWrapper is available only for windows by now.
+> :bulb: s2hWrapper is available only for windows by now.
 
 ## Requirements
 
