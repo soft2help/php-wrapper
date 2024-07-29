@@ -4,17 +4,15 @@
 
 ## Introduction
 
-Php Wrapper is a streamlined PHP development tool  designed to simplify the process of launching a PHP web server using builtin.
+Php Wrapper is a streamlined PHP development tool designed to simplify the process of launching a PHP web server using the built-in server.
 
-This fork enhances the original ezphp by adding a wrapper that facilitates quick setup and execution of a PHP server for development purposes.
+This fork enhances the original ezphp by adding a wrapper that facilitates quick setup and execution of a PHP server for development purposes, ensuring a faster and more efficient workflow for developers working on PHP projects.
 
-This ensures a faster and more efficient workflow for developers working on PHP projects.
+Php-Wrapper provides you with a personal PHP web server for development.
 
-Php-Wrapper gives you a personal PHP webserver for development.
+The goal of the project is to provide a single .exe file that will give you a ready-to-use PHP development environment.
 
-The goal of the project is to provide a single **.exe** file that will get you a ready to use PHP development environment.
-
-Php wrapper will install php-8.3.9 downloaded from <https://windows.php.net/downloads/releases/php-8.3.9-Win32-vs16-x64.zip>
+Php Wrapper will install PHP-8.3.9 downloaded from <https://windows.php.net/downloads/releases/php-8.3.9-Win32-vs16-x64.zip>.
 
 ## Features
 
@@ -49,7 +47,7 @@ go build -o s2hWrapper.exe
 3. Open your browser in http://localhost:8080. (if you dont specify another port)
 
 
-## Running 
+## Running
 
 There are two files that will help you for this task, launcher.bat and stops2hWs.bat, check them for more details
 
@@ -65,31 +63,43 @@ Usage of ./s2hWrapper.exe:
        <router> - Specify file inside docroot that we will use as router (default "index.php")
 ```
 
-### How it works?
+## How it works?
 
 After launching s2hWrapper.exe you will get a PHP web server on port 8080 (by default). See Usage to change the port. 
 
 To start working just copy your PHP files to the **Document root** folder and then open the url **http://localhost:8080** on your web browser.
 
-### Why i created s2hWrapper?
+## Why i created s2hWrapper?
 
 The primary motivation behind creating s2hWrapper was to provide developers with a simplified and efficient way to develop and run PHP applications on their local machines. Traditional methods of setting up a development environment for PHP can be cumbersome, often requiring complex configurations and installations. s2hWrapper aims to streamline this process, making it easier for developers to focus on coding rather than configuration.
 
 **Note:** s2hWrapper is available only for windows by now.
 
-### Requirements
+## Requirements
 
 PHP requires the Visual C runtime (CRT). Many applications require that so it may already be installed.
 
 The Microsoft Visual C++ Redistributable for Visual Studio 2019 is suitable for all these PHP versions, see » <https://visualstudio.microsoft.com/downloads/>.
 
 
-### Contribution
+## Notes
+
+The PHP built-in server is a lightweight web server included with PHP that can be used for development and testing purposes. Can be usefull for small personal applications. you can also use some watch dog to monitor process.
+
+php binaries are installed on project root **.s2hWS** folder and we change system folder attributes.
+
+In Windows, the attrib command is used to set or remove file attributes. The +s and +h options are specific attributes you can apply to files or directories.
+
+- **+s** (System Attribute): This sets the system attribute. When a file or directory has the system attribute, it is marked as a system file or directory. System files are typically essential for the operating system and are often hidden from the user to prevent accidental modifications or deletions.
+
+- **+h** (Hidden Attribute): This sets the hidden attribute. When a file or directory has the hidden attribute, it is not displayed in the standard file explorer view. Users need to adjust their folder options to show hidden files and directories if they want to see them.
+
+So if you want change any php configurations add any extension or another thing you should change it in **.s2hWS** folder
+
+## Contribution
 
 s2hWrapper is open source. Feel free to contribute! Just create a new issue or a new pull request.
 
-
-### License
+## License
 
 This library is released under the MIT License.
-
