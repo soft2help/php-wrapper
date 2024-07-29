@@ -94,7 +94,7 @@ In Windows, the attrib command is used to set or remove file attributes. The +s 
 
 - **+h** (Hidden Attribute): This sets the hidden attribute. When a file or directory has the hidden attribute, it is not displayed in the standard file explorer view. Users need to adjust their folder options to show hidden files and directories if they want to see them.
 
-So if you want change any php configurations add any extension or another thing you should change it in **.s2hWS** folder
+So if you want change any php configurations add any extension or another thing, you should change it in **.s2hWS** folder
 
 ## Contribution
 
