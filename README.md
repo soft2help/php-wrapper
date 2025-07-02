@@ -12,7 +12,7 @@ Php-Wrapper provides you with a personal PHP web server for development.
 
 The goal of the project is to provide a single .exe file that will give you a ready-to-use PHP development environment.
 
-Php Wrapper will install PHP-8.3.9 downloaded from <https://windows.php.net/downloads/releases/php-8.3.9-Win32-vs16-x64.zip>.
+Php Wrapper will install PHP-8.3.9 downloaded from <https://windows.php.net/downloads/releases/php-8.3.23-Win32-vs16-x64.zip>.
 
 ## Features
 
