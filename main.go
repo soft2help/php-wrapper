@@ -13,7 +13,7 @@ import (
 
 const (
 	PHPWrapperWebsite  = "https://github.com/soft2help/php-wrapper"
-	downloadURL   = "https://windows.php.net/downloads/releases/php-8.3.23-Win32-vs16-x64.zip"
+	downloadURL   = "https://windows.php.net/downloads/releases/php-8.3.27-Win32-vs16-x64.zip"
 	installFolder = ".s2hWS"
 )
 
